@@ -1,6 +1,6 @@
 # SYNtzulu: A Tiny RISC-V-Controlled SNN Processor for Real-Time Sensor Data Analysis on Low-Power FPGAs
 
-SYNtzulu is a SNN processing element designed to be used in low-cost and low-power FPGA devices for near-sensor data analysis. The system is equipped with a **dual-core neuromorphic processor**, capable of processing 4 synapses and 1 neuron per core at each clock cycle, and with a **tiny RISC-V subsystem** (SERV + Servant platform) responsible for controlling the input/output and setting runtime parameters. We evaluated the system, which was implemented on a **Lattice iCE40UP5K FPGA**, in various use cases employing SNNs with accuracy comparable to the state-of-the-art. 
+SYNtzulu is a SNN processing element designed to be used in low-cost and low-power FPGA devices for real-time near-sensor data analysis. The system is equipped with a **dual-core neuromorphic processor**, capable of processing 4 synapses and 1 neuron per core at each clock cycle, and with a **tiny RISC-V subsystem** (SERV + Servant platform) responsible for controlling the input/output and setting runtime parameters. We evaluated the system, which was implemented on a **Lattice iCE40UP5K FPGA**, in various use cases employing SNNs with accuracy comparable to the state-of-the-art. 
 In its current version, SYNtzulu: 
 - Fetches input data via a **12 MHz SPI** interface.
 - Transmits inference results through a **2 MHz UART**.
@@ -29,6 +29,20 @@ In its current version, SYNtzulu:
 
 
 For further details regarding SYNtzulu see the related paper available in open access [here](https://ieeexplore.ieee.org/document/10666827)
+
+# Citation
+
+If you wish to cite this work, please use the following:
+@ARTICLE{10666827,
+  author={Leone, Gianluca and Scrugli, Matteo Antonio and Badas, Lorenzo and Martis, Luca and Raffo, Luigi and Meloni, Paolo},
+  journal={IEEE Transactions on Circuits and Systems I: Regular Papers}, 
+  title={SYNtzulu: A Tiny RISC-V-Controlled SNN Processor for Real-Time Sensor Data Analysis on Low-Power FPGAs}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-12},
+  keywords={Field programmable gate arrays;Encoding;Neurons;Computer architecture;Real-time systems;Hardware;Synapses;Spiking neural network (SNN);edge AI;field programmable gate array (FPGA);energy efficiency;RISC-V},
+  doi={10.1109/TCSI.2024.3450966}}
 
 # SYNtzulu's flow
 
