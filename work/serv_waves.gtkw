@@ -1,0 +1,126 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Tue Jan  7 14:28:06 2025
+[*]
+[dumpfile] "/home/gleone/Documents/SYNtzulu/work/tb_serv.vcd"
+[dumpfile_mtime] "Tue Jan  7 14:23:14 2025"
+[dumpfile_size] 852835053
+[savefile] "/home/gleone/Documents/SYNtzulu/work/serv_waves.gtkw"
+[timestart] 0
+[size] 1920 1034
+[pos] 1920 0
+*-33.333282 35330000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] servant_tb.
+[treeopen] servant_tb.servant_sim_i.
+[treeopen] servant_tb.servant_sim_i.service_i.
+[treeopen] servant_tb.servant_sim_i.service_i.mosquito.snn_lp_i.layer_lp_l1_i.neuron_lp_i.Voltage_i.
+[treeopen] servant_tb.servant_sim_i.service_i.mosquito.snn_lp_i.layer_lp_l1_i.weight_mem_1.
+[treeopen] servant_tb.servant_sim_i.service_i.servant.
+[treeopen] servant_tb.servant_sim_i.service_i.servant.cpu.cpu.rf_if.
+[sst_width] 276
+[signals_width] 324
+[sst_expanded] 1
+[sst_vpaned_height] 556
+@200
+-TB
+@420
+servant_tb.servant_sim_i.service_i.pClockFrequency
+@24
+servant_tb.N4[31:0]
+@420
+servant_tb.ll
+@22
+servant_tb.p1[15:0]
+servant_tb.p2[15:0]
+@420
+servant_tb.p1[15:0]
+servant_tb.p2[15:0]
+@29
+servant_tb.valid_snn
+@28
+servant_tb.servant_sim_i.service_i.mosquito.snn_lp_i.weight_mem_L1_ena
+servant_tb.servant_sim_i.service_i.mosquito.snn_lp_i.weight_mem_L2_ena
+servant_tb.servant_sim_i.service_i.mosquito.snn_lp_i.weight_mem_L3_ena
+servant_tb.servant_sim_i.service_i.mosquito.snn_lp_i.weight_mem_L4_ena
+@200
+-CLKS
+@28
+servant_tb.servant_sim_i.service_i.slow_clk
+servant_tb.servant_sim_i.service_i.wb_clk
+servant_tb.servant_sim_i.service_i.acc_top.aif.gate_general
+@200
+-ENCODING
+@28
+servant_tb.servant_sim_i.service_i.mosquito.encoding_slot_i.clk
+servant_tb.servant_sim_i.service_i.mosquito.encoding_slot_i.input_buffer_i.en
+@22
+servant_tb.servant_sim_i.service_i.mosquito.encoding_slot_i.data_out_buffer[7:0]
+@28
+servant_tb.servant_sim_i.service_i.mosquito.encoding_slot_i.input_buffer_valid
+@200
+-SNN
+@420
+servant_tb.ll
+@28
+servant_tb.servant_sim_i.service_i.mosquito.snn_lp_i.en
+[color] 6
+servant_tb.servant_sim_i.service_i.mosquito.snn_lp_i.layer_counter[1:0]
+@22
+[color] 6
+servant_tb.servant_sim_i.service_i.mosquito.snn_lp_i.neuron_cnt[5:0]
+@28
+servant_tb.servant_sim_i.service_i.mosquito.snn_lp_i.layer_lp_l1_i.conv_i.valid
+@420
+servant_tb.errors_snn_inference
+@22
+servant_tb.servant_sim_i.service_i.mosquito.snn_lp_i.spike_out[3:0]
+@200
+-OUTPUT_BUFFER
+@28
+servant_tb.servant_sim_i.service_i.mosquito.snn_lp_i.output_buffer.clk
+servant_tb.servant_sim_i.service_i.mosquito.snn_lp_i.output_buffer_wr_en
+servant_tb.servant_sim_i.service_i.mosquito.snn_lp_i.output_buffer_ren
+@22
+servant_tb.servant_sim_i.service_i.mosquito.snn_lp_i.output_buffer_out[31:0]
+@28
+servant_tb.servant_sim_i.service_i.acc_top.aif.i_snn_valid
+servant_tb.servant_sim_i.service_i.acc_top.aif.snn_valid
+servant_tb.servant_sim_i.service_i.acc_top.aif.snn_valid_rst
+@200
+-ACCELERATOR_IF
+@28
+servant_tb.servant_sim_i.service_i.acc_top.aif.i_wb_we
+[color] 2
+servant_tb.servant_sim_i.service_i.acc_top.aif.i_wb_cyc
+@22
+[color] 2
+servant_tb.servant_sim_i.service_i.acc_top.aif.i_wb_adr[31:0]
+servant_tb.servant_sim_i.service_i.acc_top.aif.i_wb_dat[31:0]
+servant_tb.servant_sim_i.service_i.acc_top.aif.i_wb_adr_d[7:0]
+servant_tb.servant_sim_i.service_i.acc_top.aif.o_wb_rdt[31:0]
+@28
+servant_tb.servant_sim_i.service_i.acc_top.aif.o_wb_ack
+@200
+-ACCELERATOR_TOP
+@22
+servant_tb.servant_sim_i.service_i.acc_top.aif.output_buffer_addr[7:0]
+servant_tb.servant_sim_i.service_i.acc_top.aif.output_buffer_out[31:0]
+@28
+servant_tb.servant_sim_i.service_i.acc_top.aif.output_buffer_ren
+servant_tb.servant_sim_i.service_i.acc_top.uart_wren
+@22
+servant_tb.servant_sim_i.service_i.acc_top.uart_byte_hp[7:0]
+@200
+-UART
+@28
+servant_tb.servant_sim_i.service_i.acc_top.aif.i_uart_ready
+@22
+servant_tb.servant_sim_i.service_i.acc_top.uart_transmitter.iData[7:0]
+@28
+servant_tb.servant_sim_i.service_i.acc_top.aif.o_uart_hp
+servant_tb.servant_sim_i.service_i.acc_top.aif.o_uart_send
+servant_tb.servant_sim_i.service_i.acc_top.aif.o_uart_wren
+servant_tb.servant_sim_i.service_i.acc_top.aif.uart_send_next
+servant_tb.servant_sim_i.service_i.acc_top.uart_transmitter.oTxd
+[pattern_trace] 1
+[pattern_trace] 0

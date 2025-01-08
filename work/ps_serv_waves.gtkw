@@ -1,0 +1,39 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Thu Dec 19 10:11:32 2024
+[*]
+[dumpfile] "/home/gleone/Documents/SYNtzulu/work/ps_tb_serv.vcd"
+[dumpfile_mtime] "Thu Dec 19 09:59:51 2024"
+[dumpfile_size] 2645057259
+[savefile] "/home/gleone/Documents/SYNtzulu/work/ps_serv_waves.gtkw"
+[timestart] 15321000000
+[size] 1920 1034
+[pos] 1920 0
+*-29.370258 16993000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] servant_tb.
+[treeopen] servant_tb.servant_sim_i.
+[treeopen] servant_tb.servant_sim_i.service_i.
+[sst_width] 515
+[signals_width] 478
+[sst_expanded] 1
+[sst_vpaned_height] 312
+@28
+servant_tb.servant_sim_i.service_i.\mosquito.encoding_slot_i.input_buffer_valid
+servant_tb.servant_sim_i.service_i.\mosquito.valid_bin
+@200
+-potential 0
+-potential 1
+@28
+servant_tb.servant_sim_i.service_i.o_txd
+servant_tb.servant_sim_i.service_i.\acc_top.uart_if_ready
+@29
+servant_tb.servant_sim_i.service_i.\acc_top.uart_if_data[7]
+servant_tb.servant_sim_i.service_i.\acc_top.uart_if_data[6]
+servant_tb.servant_sim_i.service_i.\acc_top.uart_if_data[5]
+servant_tb.servant_sim_i.service_i.\acc_top.uart_if_data[4]
+servant_tb.servant_sim_i.service_i.\acc_top.uart_if_data[3]
+servant_tb.servant_sim_i.service_i.\acc_top.uart_if_data[2]
+servant_tb.servant_sim_i.service_i.\acc_top.uart_if_data[1]
+servant_tb.servant_sim_i.service_i.\acc_top.uart_if_data[0]
+[pattern_trace] 1
+[pattern_trace] 0

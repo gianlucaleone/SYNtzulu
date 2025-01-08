@@ -1,0 +1,34 @@
+# clock and reset
+set_io i_clk        35
+set_frequency i_clk 12
+set_io -nowarn i_rst 20
+
+set_frequency wb_clk      24
+set_frequency spi_clk     24
+set_frequency spi_clk_g   24
+set_frequency wb_clk_enc  24
+set_frequency wb_clk_snn  24
+set_frequency wb_clk_serv 24
+set_frequency timer_clk   24
+
+
+# buttons 
+set_io -nowarn buttons[0] 10
+set_io -nowarn buttons[1] 18
+set_io -nowarn buttons[2] 19
+
+
+# led
+set_io led[3] 27
+set_io led[2] 21
+set_io led[1] 25
+set_io led[0] 26
+
+# uart
+set_io o_txd 9
+
+#spi
+set_io o_flash_ss 16
+set_io o_flash_sck 15
+set_io o_flash_mosi 14
+set_io i_flash_miso 17
