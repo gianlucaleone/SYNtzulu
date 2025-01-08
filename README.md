@@ -30,20 +30,6 @@ In its current version, SYNtzulu:
 
 For further details regarding SYNtzulu see the related paper available in open access [here](https://ieeexplore.ieee.org/document/10666827)
 
-# Citation
-
-If you wish to cite this work, please use the following:
-@ARTICLE{10666827,
-  author={Leone, Gianluca and Scrugli, Matteo Antonio and Badas, Lorenzo and Martis, Luca and Raffo, Luigi and Meloni, Paolo},
-  journal={IEEE Transactions on Circuits and Systems I: Regular Papers}, 
-  title={SYNtzulu: A Tiny RISC-V-Controlled SNN Processor for Real-Time Sensor Data Analysis on Low-Power FPGAs}, 
-  year={2024},
-  volume={},
-  number={},
-  pages={1-12},
-  keywords={Field programmable gate arrays;Encoding;Neurons;Computer architecture;Real-time systems;Hardware;Synapses;Spiking neural network (SNN);edge AI;field programmable gate array (FPGA);energy efficiency;RISC-V},
-  doi={10.1109/TCSI.2024.3450966}}
-
 # SYNtzulu's flow
 
 To introduce you to SYNtzulu, we have prepared a demo that showcases its capabilities. The demo involves decoding a 16-channel sEMG signal into 12 classes, each corresponding to a specific hand gesture. The biosignal is event-encoded using a variant of the delta modulation algorithm. Consequently, the network has 32 input channels (each sEMG channel is mapped into two spiking channels) and 12 output channels (one for each class). The network consists of four dense layers with 64, 128, 64, and 12 neurons, respectively.
@@ -129,6 +115,8 @@ You can upload the simulation and hardware results into the *syntzulu-hw-file-ge
 You should get something like the image below, depending on how long your simulation and hardware test are.
 ![GT-vs-SIM-vs-HW](images/gt-vs-sim-vs-hw.png)
 
+## Power consumption
+
 The most cheap method to measure the power consumption of the system involves:
 1. Cutting the VCORE jumper,
 2. Soldering a shunt resistor (we used 3.3 ohm)
@@ -136,6 +124,21 @@ The most cheap method to measure the power consumption of the system involves:
 
 This is what we observed: 
 ![Shunt-Resistor-Voltage-Drop](images/power_profile_24MHz_gating_uart-4M.png)
+
+# Citation
+
+If you wish to cite this work, please use the following: 
+
+@ARTICLE{10666827,  
+  author={Leone, Gianluca and Scrugli, Matteo Antonio and Badas, Lorenzo and Martis, Luca and Raffo, Luigi and Meloni, Paolo},  
+  journal={IEEE Transactions on Circuits and Systems I: Regular Papers},  
+  title={SYNtzulu: A Tiny RISC-V-Controlled SNN Processor for Real-Time Sensor Data Analysis on Low-Power FPGAs},  
+  year={2024},  
+  volume={},  
+  number={},  
+  pages={1-12},  
+  keywords={Field programmable gate arrays;Encoding;Neurons;Computer architecture;Real-time systems;Hardware;Synapses;Spiking neural network (SNN);edge AI;field programmable gate array (FPGA);energy efficiency;RISC-V},  
+  doi={10.1109/TCSI.2024.3450966} }
 
 # Acknowledgments
 
