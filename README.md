@@ -64,9 +64,9 @@ sudo make
 The first step is to copy the new application folder into the root of SYNtzulu.
 Then, to properly configure the new application, use the following command:
 ```
-make create_application app=<new_application>
+make create_application app=emg
 ```
-If you are following the demo instructions, replace *<new_application>* with *emg*.
+If you are not following the demo instructions, replace *emg* with the name of your application folder.
 This command will automatically place the configuration files in the proper paths and compile the firmware.
 
 To start the simulation, simply execute the command:
