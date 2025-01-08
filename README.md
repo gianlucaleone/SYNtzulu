@@ -60,7 +60,7 @@ cd riscv-gnu-toolchain/
 sudo make
 ```
 
-## Your first simulation
+## Simulation
 The first step is to copy the new application folder into the root of SYNtzulu.
 Then, to properly configure the new application, use the following command:
 ```
@@ -75,7 +75,7 @@ make simulate
 ```
 This process may take a few minutes. If the delta modulation and inference results are correct, the inference results will appear in the terminal. If there are mismatches between simulated and expected results, the errors will be reported in the terminal.
 
-## Your first run
+## First run
 
 ### Flash setup
 
