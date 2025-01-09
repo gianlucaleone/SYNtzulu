@@ -1,6 +1,6 @@
 # SYNtzulu: A Tiny RISC-V-Controlled SNN Processor for Real-Time Sensor Data Analysis on Low-Power FPGAs
 
-SYNtzulu is a SNN processing element designed to be used in low-cost and low-power FPGA devices for real-time near-sensor data analysis. The system is equipped with a **dual-core neuromorphic processor**, capable of processing 4 synapses and 1 neuron per core at each clock cycle, and with a **tiny RISC-V subsystem** (SERV + Servant platform) responsible for controlling the input/output and setting runtime parameters. We evaluated the system, which was implemented on a **Lattice iCE40UP5K FPGA**, in various use cases employing SNNs with accuracy comparable to the state-of-the-art. 
+SYNtzulu is a Spiking Neural Network (SNN) processing element designed to be used in low-cost and low-power FPGA devices, enabling for real-time and near-sensor data analysis. The system features a **dual-core neuromorphic processor**, with each core capable of processing four synapses and one neuron per clock cycle. Additionally, it includes a **tiny RISC-V subsystem** (SERV + Servant platform) that manages the input/output operations and configures runtime parameters.  evaluated the system, which was implemented on a **Lattice iCE40UP5K FPGA**, in various use cases employing SNNs with accuracy comparable to the state-of-the-art. 
 In its current version, SYNtzulu: 
 - Fetches input data via a **12 MHz SPI** interface.
 - Transmits inference results through a **2 MHz UART**.
