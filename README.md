@@ -147,4 +147,5 @@ We would like to thank the following repositories and authors for providing modu
 - [YosysHQ - Open Source EDA](https://github.com/YosysHQ/oss-cad-suite-build)
 - [SERV](https://github.com/olofk/serv/tree/main)
 - [BasicUART](https://github.com/STjurny/BasicUART)
-- [SPI Flash simulation](https://github.com/YosysHQ/picorv32)
+- [ice40_power](https://github.com/tinyvision-ai-inc/ice40_power)
+- [picorv32](https://github.com/YosysHQ/picorv32)
