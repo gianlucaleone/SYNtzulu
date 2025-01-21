@@ -34,7 +34,7 @@ For further details regarding SYNtzulu see the related paper available in open a
 
 To introduce you to SYNtzulu, we have prepared a demo that showcases its capabilities. The demo involves decoding a 16-channel sEMG signal into 12 classes, each corresponding to a specific hand gesture. The biosignal is event-encoded using a variant of the delta modulation algorithm. Consequently, the network has 32 input channels (each sEMG channel is mapped into two spiking channels) and 12 output channels (one for each class). The network consists of four dense layers with 64, 128, 64, and 12 neurons, respectively.
 
-The flow comprises two Python scripts that guide you through the training and deployment process:
+The flow comprises two Python scripts working on the Google Colab platform that guide you through the training and deployment process:
 
 1. *semg_syntzulu_demo*\
   This script leverages the Lava-DL platform to train a four-layer dense SNN using a single recording from the Ninapro DB5 dataset. The resulting model is quantized and exported using a custom class, which provides the input for the second script.\
@@ -45,7 +45,10 @@ Key output: Trained and quantized model (*continuous_sEMG_classification.obj*)
 Key output: Application folder (*emg*)
 
 Once you get the application folder (*emg*) copy it inside *SYNtzulu/*.
-
+> [!WARNING]
+> Google Colab is currently running Python 3.11, which is incompatible with torchvision 0.14.0 used by the lava-dl package.
+> To resolve this issue, navigate to Tools → Command Palette → Use fallback runtime version.
+> 
 ## Environment setup
 SYNtzulu has been tested with the oss_cad_suite (version 2023-07-28), which can be downloaded [here](https://github.com/YosysHQ/oss-cad-suite-build/releases/tag/2023-07-28).
 After downloading and extracting the archive, prepare the environment by running the following command:
