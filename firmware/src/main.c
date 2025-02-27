@@ -26,7 +26,7 @@
 #define DEV_READ(addr)          (*((volatile uint32_t *)(addr)))
 
 // timer isr
-static void irq_entry(void);
+static void irq_entry(void) __attribute__((naked));
 
 // Load SNN weight or sample
 static void load_data(uint32_t spi_addr, uint32_t snn_addr, uint32_t spi_read_size); // blocking
@@ -117,7 +117,8 @@ static void irq_entry(void)  {
 	// turn high-frequency oscillator off
 	DEV_WRITE(CLOCK_GATING, GATE_SERV);
 	DEV_WRITE(CLOCK_GATING, GATE_GENERAL);
-   	
+
+	asm volatile("wfi");
 }
 
 static void load_data(uint32_t spi_addr, uint32_t snn_addr, uint32_t spi_read_size) {
