@@ -49,7 +49,10 @@ module servant_slow_timer
 							mtime <= 0;
 
 
-	always @(posedge slow_clk)
-		o_irq <= (mtimeslice >= mtimecmp);
+	always @(posedge slow_clk, posedge wr_en)
+		if(wr_en)
+			o_irq <= 0;
+		else
+			o_irq <= (mtimeslice >= mtimecmp);
 
 endmodule
