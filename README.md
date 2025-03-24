@@ -4,7 +4,7 @@ SYNtzulu is a Spiking Neural Network (SNN) processing element designed to be use
 In its current version, SYNtzulu: 
 - Fetches input data via a **12 MHz SPI** interface.
 - Transmits inference results through a **2 MHz UART**.
-- Dissipates a maximum power of **14.2 mW** when performing SNN inference while clocked at **24 MHz**, excluding input/output power consumption.
+- Dissipates a maximum power of **9.5 mW** when performing SNN inference while clocked at **24 MHz**, excluding input/output power consumption.
 - Consumes as little as **0.3 mW** in **idle** mode.
 
 **Device Utilization**  
