@@ -152,6 +152,3 @@ We would like to thank the following repositories and authors for providing modu
 - [BasicUART](https://github.com/STjurny/BasicUART)
 - [ice40_power](https://github.com/tinyvision-ai-inc/ice40_power)
 - [picorv32](https://github.com/YosysHQ/picorv32)
-
-
-<meta name="google-site-verification" content="pAQoc3zOxIWOxNE6MjAoe4EQlMhe0e7Z3uRFkRsYIuU" />
