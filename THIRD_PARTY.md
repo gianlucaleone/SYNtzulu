@@ -2,7 +2,7 @@
 
 This document identifies third-party source code included in SYNtzulu, including locally modified copies. The project-level MIT license does not replace the licenses applicable to third-party portions. Copyright and license notices for those portions remain applicable.
 
-Inventory reviewed on 2026-10-29 against SYNtzulu commit `c6ac00f1103d6996751acde43f82edcc8b943f4b`.
+Source inventory reviewed against SYNtzulu commit `c6ac00f1103d6996751acde43f82edcc8b943f4b`. Provenance information updated on 2026-10-29 following confirmation by the project maintainer.
 
 ## 1. SERV RISC-V core
 
@@ -48,6 +48,7 @@ This file is an exception to the ISC license used for the rest of the SERV core.
 - **Files containing copied or adapted platform/testbench code:**
 
 - `rtl/servant/new_servant.v`
+- `rtl/servant/new_service.v`
 - `rtl/servant/servant_arbiter.v`
 - `rtl/servant/servant_gpio.v`
 - `rtl/servant/servant_mux.v`
@@ -58,7 +59,8 @@ This file is an exception to the ISC license used for the rest of the SERV core.
 - `sim/tb/servant_tb.v`
 - `sim/tb/uart_decoder.v`
 
-`new_servant.v` adapts upstream `servant.v`. `servant_slow_timer.v` adapts the Servant timer structure. The testbenches contain SYNtzulu-specific additions. `servant_arbiter.v` and `servant_ram.v` match SERV 1.2.1; `uart_decoder.v` matches the upstream decoder.
+`new_servant.v` adapts upstream `servant.v`. `new_service.v` derives from upstream `service.v`, with SYNtzulu-specific additions. 
+`servant_slow_timer.v` adapts the Servant timer structure. The testbenches contain SYNtzulu-specific additions. `servant_arbiter.v` and `servant_ram.v` match SERV 1.2.1; `uart_decoder.v` matches the upstream decoder.
 
 This list does not assign the SERV license to the entire `rtl/servant/` directory: that directory also contains SYNtzulu-specific logic and components with other licenses.
 
@@ -130,39 +132,34 @@ The local file matches the upstream v1.1 utility.
 
 - **Upstream:** https://github.com/five-embeddev/riscv-scratchpad/tree/master/baremetal-startup-c/src
 - **Project website:** https://five-embeddev.com/
-- **License:** Unlicense, explicitly declared by SPDX identifiers in the local files.
+- **License:** Unlicense for upstream-derived portions. Local SPDX identifiers are present in the support files listed below; the attribution of `main.c` is based on maintainer-confirmed derivation from the Five EmbedDev example.
 - **Files:**
 
+- `firmware/src/main.c`
 - `firmware/src/startup.c`
 - `firmware/src/timer.c`
 - `firmware/src/timer.h`
 - `firmware/src/riscv-csr.h`
 - `firmware/src/riscv-interrupts.h`
 
-These include local adaptations of the startup code, timer driver and CSR definitions. `riscv-interrupts.h` matches the upstream file.
+These include local adaptations of the main program, startup code, timer driver and CSR definitions. `main.c` combines Five EmbedDev-derived code with SYNtzulu-specific application logic. `riscv-interrupts.h` matches the upstream file.
 
-## 11. SiFive / Freedom Metal linker script
+## 11. SiFive / Freedom Metal linker scripts
 
 - **Original project:** https://github.com/sifive/freedom-metal
 - **Matching source family:** https://github.com/five-embeddev/riscv-scratchpad/blob/master/baremetal-startup-c/src/linker.lds
-- **License:** Apache-2.0, explicitly declared in the local header.
+- **License:** Apache-2.0 for upstream-derived portions, explicitly declared in the local `linker.lds` header. The derivation of `linkerscript.lds` from SiFive was confirmed by the project maintainer.
 - **Copyright:** 2020 SiFive Inc.
-- **File:** `firmware/src/linker.lds`
+- **Files:**
 
-The local script adapts the SiFive linker script distributed with the Five EmbedDev example. Memory regions and sections have been customized.
+- `firmware/src/linker.lds`
+- `firmware/src/linkerscript.lds`
 
-## Provenance still to be confirmed
+`linker.lds` adapts the SiFive linker script distributed with the Five EmbedDev example. `linkerscript.lds` is also derived from SiFive code, as confirmed by the project maintainer. Memory regions and sections have been customized.
 
-These entries are not definitive third-party license assignments:
+## Original SYNtzulu clock-generation module
 
-| Local file | Observation | Remaining verification |
-| --- | --- | --- |
-| `firmware/src/main.c` | Contains initialization/comment sequences also present in the Five EmbedDev bare-metal example, interspersed with SYNtzulu-specific application code. | Confirm whether it was adapted from that example and identify the inherited portions; the local header has no third-party license notice. |
-| `rtl/servant/new_service.v` | Integrates the Servant platform and contains substantial SYNtzulu-specific logic. | Confirm whether source was copied from upstream `service.v`, rather than merely instantiating Servant. |
-| `rtl/servant/servant_clock_gen.v` | Shares the Servant clock-generator name and a small amount of reset structure, but differs substantially from the compared upstream implementation. | Confirm provenance before assigning the entire file to SERV or ice40_power. |
-| `firmware/src/linkerscript.lds` | Uses the startup symbols also used by the SiFive/Five EmbedDev flow, but is a separate short script without a license header. | Confirm whether this script is original or derived; the Apache-2.0 header in `linker.lds` does not by itself establish this file's license. |
-
-The review identifies observable copies and adaptations; it cannot establish the provenance of every unannotated fragment solely from filenames or directory placement.
+`rtl/servant/servant_clock_gen.v` is an original SYNtzulu implementation developed by the project team, as confirmed by the project maintainer. It is covered by the project-level MIT license and is not classified as a third-party SERV or ice40_power component.
 
 ## External dependencies
 
