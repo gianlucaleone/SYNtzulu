@@ -153,6 +153,6 @@ We would like to thank the following repositories and authors for providing modu
 - [ice40_power](https://github.com/tinyvision-ai-inc/ice40_power)
 - [picorv32](https://github.com/YosysHQ/picorv32)
 
-SYNtzulu was developed at the Department of Electrical and Electronic Engineering (DIEE), University of Cagliari (Università degli Studi di Cagliari – UniCA), Italy.
-All rights to this software are owned by the University of Cagliari.
-Copyright ©️ 2026 University of Cagliari.
+## Ownership and authors
+This design was developed at the Department of Electrical and Electronic Engineering (DIEE), University of Cagliari, Italy. All economic rights belong to the University of Cagliari. It is released under the MIT license; the licence is non-exclusive and does not transfer ownership.
+Author: Gianluca Leone, Lorenzo Badas, Paolo Meloni.
